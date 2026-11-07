@@ -1,0 +1,6 @@
+{
+  "name": "Dunia Digital - Pengembaraan Pulau Ilmu",
+  "description": "Persekitaran 3D interaktif blocky cartoon Pengembaraan Pulau Ilmu untuk pembelajaran digital Bahasa Melayu Tahun 5: Misteri di Sebalik Sungai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

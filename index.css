@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-hot-pink: #F5008F;
+    --color-matcha-green: #9DBB69;
+    --color-strawberry-pink: #F4A6B8;
+    --color-strawberry-red: #E87991;
+    --color-cream: #FFF4E6;
+    --color-soft-white: #FFFCF8;
+    --color-deep-green: #526B4C;
+  }
+
+  body {
+    font-family: 'Fredoka', 'Nunito', system-ui, -apple-system, sans-serif;
+    background-color: #FFF4E6;
+    color: #3b2a26;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+  }
+}
+
+/* Custom animated water / floating glows */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+/* Print optimizations for Sijil Penghargaan */
+@media print {
+  @page {
+    size: landscape;
+    margin: 8mm;
+  }
+
+  body {
+    background: transparent !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide 3D canvas and non-print overlays */
+  canvas,
+  .print\\:hidden,
+  button,
+  .pointer-events-auto:not(#certificate-modal-container *) {
+    display: none !important;
+  }
+
+  #certificate-sheet {
+    border-width: 6px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    margin: 0 auto !important;
+  }
+}
+
